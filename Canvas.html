@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Drawing app</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div id="message">
+            <h1>Drawing app</h1>
+            <h2>Click and drag to draw</h2>
+            <h2>Click the button to clear the canvas</h2>
+        </div>
+        <div id="container">
+            <div class="controls">
+                <button id= 'clearbtn'>clear</button>
+                <button id= 'undobtn'>undo</button>
+                <button id= 'redobtn'>redo</button>
+                 <div id="colorPicker">
+                    <input type="color" id="color" name="color" value="#000000">
+                    <span id="colorLabel">Color:</span>
+                    <span id="colorValue">#000000</span> <!-- Display the current color value -->
+                </div>
+                <div id="sizePicker">
+                    <input type="range" id="size" name="size" min="1" max="100" value="5" step="1">
+                    <span id="sizeLabel">Width:</span>
+                    <span id="sizeValue">5</span> <!-- Display the current width value -->
+                </div> 
+                <div id="eraser">
+                    <button id="eraserbtn">Eraser</button>
+                </div> 
+                <div id="eraserSizePicker">
+                    <input type="range" id="eraserSize" name="eraserSize" min="1" max="100" value="5" step="1">
+                    <span id="eraserSizeLabel">Eraser Width:</span>
+                    <span id="eraserSizeValue">5</span> <!-- Display the current eraser size value -->
+                </div> 
+                <div id="savebtn">
+                    <button id="save">Save</button>
+            </div>
+        </div>
+
+        <canvas id="dcanvas" width="800" height="600" style="border:1px solid black;"></canvas>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controls.js"></script>
+    </body>
+</html>
